@@ -153,6 +153,7 @@ export function LoginPage() {
 
                     <Center mb="md">
                         <GoogleLogin
+                            shape="pill" 
                             onSuccess={async (response) => {
                                 if (response.credential) {
                                     setLoading(true)
