@@ -4,6 +4,16 @@ Follow these steps to set up a reusable Python virtual environment for your proj
 
 ---
 
+### Pre-requisite ###
+
+Make a .env file in nested level /crm_api/crm_api directory
+
+```
+DJANGO_SECRET=<generate a secret yourself and keep it private!>
+GOOGLE_CLIENT_ID=<get this from google cloud app>
+```
+
+
 ### 1. Install Python
 
 Make sure Python is installed:
