@@ -1,0 +1,54 @@
+/* QuickActions.module.css */
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--mantine-radius-md);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  transition: background-color 150ms ease, border-color 150ms ease;
+  width: 100%;
+  position: relative;
+}
+
+.actionButton::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: var(--mantine-radius-md);
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.actionButton:hover::before {
+  background-color: var(--bg-hover);
+}
+
+.actionIcon {
+  color: var(--text-primary);
+  opacity: 0.6;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+.actionButton:hover .actionIcon {
+  opacity: 1;
+  color: var(--text-on-active);
+}
+
+.actionLabel {
+  color: white;
+  opacity: 0.7;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+.actionButton:hover .actionLabel {
+  opacity: 1;
+  color: var(--text-on-active);
+}

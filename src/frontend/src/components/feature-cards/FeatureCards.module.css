@@ -1,0 +1,56 @@
+.sectionHeader {
+  color: var(--bg-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  border-color: var(--color-blue-light);
+  box-shadow: 0 4px 20px rgba(176, 215, 255, 0.15);
+}
+
+.icon {
+  background-color: var(--bg-active);
+  color: var(--text-on-active);
+}
+
+.cardTitle {
+  color: white;
+  font-weight: 700;
+}
+
+.cardDescription {
+  color: white;
+  line-height: 1.6;
+}
+
+.highlightIcon {
+  color: white;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.highlightLabel {
+  color: white;
+  opacity: 0.7;
+}
+
+.cta {
+  color: white;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 100ms ease;
+}
+
+.card:hover .cta {
+  opacity: 1;
+}

@@ -1,0 +1,116 @@
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  border-color: var(--color-blue-light);
+  box-shadow: 0 4px 20px rgba(176, 215, 255, 0.15);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+
+.icon {
+  background-color: var(--bg-active);
+  color: var(--text-on-active);
+  flex-shrink: 0;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: white;
+  opacity: 0.7;
+  margin-top: 1px;
+}
+
+.countBadge {
+  font-weight: 700;
+  color: white;
+  opacity: 0.85;
+}
+
+.divider {
+  border-color: var(--border-color);
+}
+
+/* ── Rows ────────────────────────────────────────────────────────────────────── */
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: var(--mantine-radius-sm);
+  transition: background-color 120ms ease;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row:hover {
+  background-color: var(--bg-active);
+}
+
+.row:hover .rowArrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.rowLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  color: white;
+  opacity: 0.5;
+}
+
+.badge {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.rowArrow {
+  color: white;
+  opacity: 0;
+  transition: opacity 120ms ease, transform 120ms ease;
+  flex-shrink: 0;
+}
+
+/* ── Empty / error states ────────────────────────────────────────────────────── */
+
+.allClear {
+  color: white;
+  opacity: 0.7;
+  padding: 4px 0;
+}
+
+.emptyText {
+  color: white;
+  opacity: 0.5;
+}
+
+/* ── Overflow note ───────────────────────────────────────────────────────────── */
+
+.overflowNote {
+  color: white;
+  opacity: 0.5;
+  padding-left: 10px;
+}
