@@ -1,0 +1,20 @@
+/* Global CSS */
+/* Palette - raw values */
+:root {
+  --color-lavender: #eae8ff;
+  --color-grey-light: #d8d5db;
+  --color-grey-mid: #adacb5;
+  --color-navy: #2d3142;
+  --color-blue-light: #b0d7ff;
+  --color-white: #ffffff;
+  /* Semantic */
+  --bg-primary: var(--color-navy);
+  --bg-secondary: var(--color-lavender);
+  --bg-hover: var(--color-grey-mid);
+  --bg-active: var(--color-blue-light);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-grey-light);
+  --text-on-active: var(--color-navy);
+  --border-color: var(--color-grey-light);
+}
+
