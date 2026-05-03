@@ -31,7 +31,6 @@ class GoogleLoginView(APIView):
             total_users = User.objects.all().count()
             user = User.objects.get(email=email)
         except User.DoesNotExist:
-            # Dynamically get user status/is_staff (admin)
             user_status = 'APPROVED' if total_users == 0 else 'PENDING'
             user_is_staff = True if total_users == 0 else False
             user = User.objects.create_user(
@@ -46,6 +45,8 @@ class GoogleLoginView(APIView):
                 picture=idinfo.get('picture', ''),
                 status=user_status,
             )
+            if user_status == 'APPROVED':
+                return Response({'status': 'approved'}, status=200)
             return Response({'status': 'pending'}, status=202)
         try:
             profile = UserProfile.objects.get(user=user)
