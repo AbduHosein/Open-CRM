@@ -1,0 +1,48 @@
+.sectionHeader {
+  color: var(--bg-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.card {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  border-color: var(--color-blue-light) !important;
+  box-shadow: 0 4px 20px rgba(176, 215, 255, 0.15);
+}
+
+.name {
+  color: white;
+  font-weight: 600;
+}
+
+.email {
+  color: var(--color-grey-mid);
+  font-size: 0.875rem;
+}
+
+.date {
+  color: var(--color-grey-mid);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.avatar {
+  background-color: var(--bg-active) !important;
+  color: var(--text-on-active) !important;
+  font-weight: 700;
+}
+
+.emptyText {
+  color: var(--color-grey-mid);
+}
+
+.emptySubtext {
+  color: var(--color-grey-mid);
+  opacity: 0.6;
+}

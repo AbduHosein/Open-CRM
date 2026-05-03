@@ -1,0 +1,150 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Brand (left) ────────────────────────────────────── */
+
+.brand {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+.logo {
+  color: var(--color-blue-light);
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+
+.brandName {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.3s both;
+}
+
+.brandTagline {
+  font-size: 15px;
+  color: var(--color-blue-light);
+  margin: 0 0 32px;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.4s both;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.5s both;
+}
+
+.featureItem:nth-child(2) { animation-delay: 0.6s; }
+.featureItem:nth-child(3) { animation-delay: 0.7s; }
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── Card (right) ────────────────────────────────────── */
+
+.card {
+  width: 340px;
+  flex-shrink: 0;
+  background: rgba(45, 49, 66, 0.75) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(234, 232, 255, 0.12) !important;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.4s both;
+}
+
+.cardTitle {
+  color: var(--text-primary) !important;
+}
+
+.cardSubtitle {
+  color: var(--text-secondary) !important;
+}
+
+.footerNote {
+  color: var(--text-secondary);
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 680px) {
+  .content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .featureItem {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

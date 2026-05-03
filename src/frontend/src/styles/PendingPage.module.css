@@ -1,0 +1,11 @@
+.icon {
+  background: rgba(176, 215, 255, 0.15) !important;
+  color: var(--color-blue-light) !important;
+}
+
+.note {
+  color: var(--text-secondary);
+  opacity: 0.6;
+  line-height: 1.6;
+  max-width: 260px;
+}
