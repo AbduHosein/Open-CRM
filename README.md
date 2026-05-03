@@ -19,7 +19,7 @@ A basic v1 CRM made with Django + SQLite + Typescript React for solopreneurs or 
 
 #### First Time Signing In ####
 1. Follow this article [Build Secure Google Sign-In with React, TypeScript + Node.js](https://medium.com/@anjanaindumini128/build-secure-google-sign-in-with-react-typescript-node-js-677394b8543a)
-2. Once you have your gooogle client id:
+2. Once you have your gooogle client id add it your your frontend .env file at /src/frontend/.env:
 ```
 VITE_GOOGLE_CLIENT_ID=<client id generated for your google cloud client>
 ```
