@@ -116,7 +116,7 @@ export function LoginPage() {
                             <path d="M2 12l10 5 10-5" />
                         </svg>
                     </div>
-                    <h1 className={styles.brandName}>RTS-CRM</h1>
+                    <h1 className={styles.brandName}>Open-CRM</h1>
                     <p className={styles.brandTagline}>
                         Relationships. Tracked. Scaled.
                     </p>
@@ -148,7 +148,7 @@ export function LoginPage() {
                         Welcome back
                     </Text>
                     <Text className={styles.cardSubtitle} size="sm" mb="xl">
-                        Sign in to your RTS-CRM account
+                        Sign in to your Open-CRM account
                     </Text>
 
                     <Center mb="md">

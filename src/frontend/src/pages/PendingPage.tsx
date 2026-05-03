@@ -105,7 +105,7 @@ export function PendingPage() {
               <path d="M2 12l10 5 10-5" />
             </svg>
           </div>
-          <h1 className={styles.brandName}>RTS-CRM</h1>
+          <h1 className={styles.brandName}>Open-CRM</h1>
           <p className={styles.brandTagline}>Relationships. Tracked. Scaled.</p>
         </div>
 
