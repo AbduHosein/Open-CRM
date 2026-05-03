@@ -61,6 +61,22 @@ class GoogleLoginView(APIView):
                     },
                     status=200,
                 )
+            if user_status == "APPROVED":
+                refresh = RefreshToken.for_user(user)
+                return Response(
+                    {
+                        "status": "approved",
+                        "access": str(refresh.access_token),
+                        "refresh": str(refresh),
+                        "user": {
+                            "email": user.email,
+                            "name": f"{user.first_name} {user.last_name}",
+                            "picture": user.userprofile.picture,
+                            "is_staff": user.is_staff,
+                        },
+                    },
+                    status=200,
+                )
             return Response({"status": "pending"}, status=202)
         try:
             profile = UserProfile.objects.get(user=user)
