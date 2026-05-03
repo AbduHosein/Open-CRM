@@ -3,7 +3,7 @@ import { useForm } from '@mantine/form';
 import { modals } from '@mantine/modals';
 import { DatePickerInput } from '@mantine/dates';
 import '@mantine/dates/styles.css';
-import { notify } from '../../../utils/notify';
+import { notify } from '../../utils/notify';
 
 interface CreateLeadFormProps {
     onLeadCreated: () => void;

@@ -4,8 +4,8 @@ import { useForm } from '@mantine/form';
 import { modals } from '@mantine/modals';
 import { DatePickerInput } from '@mantine/dates';
 import '@mantine/dates/styles.css';
-import { notify } from '../../../utils/notify';
-import { NoteSection } from '../../note-section/NoteSection';
+import { notify } from '../../utils/notify';
+import { NoteSection } from '../note-section/NoteSection';
 
 interface EditClientFormProps {
     id: number;

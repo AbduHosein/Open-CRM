@@ -4,7 +4,7 @@ import { modals } from '@mantine/modals';
 import { DatePickerInput } from '@mantine/dates';
 import '@mantine/dates/styles.css';
 import { useState, useEffect } from 'react';
-import { notify } from '../../../utils/notify';
+import { notify } from '../../utils/notify';
 
 interface CreateClientFormProps {
     onClientCreated: () => void;
