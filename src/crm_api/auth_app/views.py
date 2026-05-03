@@ -28,6 +28,7 @@ class GoogleLoginView(APIView):
         email = idinfo.get('email')
 
         try:
+            total_users = User.objects.all().count()
             user = User.objects.get(email=email)
         except User.DoesNotExist:
             user = User.objects.create_user(
@@ -36,11 +37,11 @@ class GoogleLoginView(APIView):
                 first_name=idinfo.get('given_name', ''),
                 last_name=idinfo.get('family_name', ''),
             )
+            user_status = 'APPROVED' if total_users == 0 else 'PENDING'
             UserProfile.objects.create(
-                user=user, picture=idinfo.get('picture', ''), status='PENDING'
+                user=user, picture=idinfo.get('picture', ''), status=user_status
             )
             return Response({'status': 'pending'}, status=202)
-
         try:
             profile = UserProfile.objects.get(user=user)
             if profile.status == 'PENDING':
