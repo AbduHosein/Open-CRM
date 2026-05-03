@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Avatar, Card, Divider, Group, SimpleGrid, Text, Title } from '@mantine/core';
 import { IconGauge, IconUsers, IconUserSearch } from '@tabler/icons-react';
 import classes from './UserGreeting.module.css';
-import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 export function UserGreeting() {
   const { user } = useAuth()

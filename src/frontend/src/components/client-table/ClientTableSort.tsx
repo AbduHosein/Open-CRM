@@ -12,7 +12,7 @@ import {
   Badge,
 } from '@mantine/core';
 import classes from './ClientTableSort.module.css';
-import { LeadCard } from '../../lead-page/lead-card/LeadCard';
+import { LeadCard } from '../lead-card/LeadCard';
 import { modals } from '@mantine/modals';
 import { EditClientForm } from '../edit-client-modal/EditClientModal';
 
