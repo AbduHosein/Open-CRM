@@ -1,6 +1,6 @@
 # Open-CRM
 
-By: Abdu Hosein, Phillip Lane
+By: Abdu Hosein, Phil Lane
 
 A basic v1 CRM made with Django + SQLite + Typescript React for solopreneurs or small agencies.
 
