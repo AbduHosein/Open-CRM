@@ -23,7 +23,7 @@ class GoogleLoginView(APIView):
                 credential, google_requests.Request(), settings.GOOGLE_CLIENT_ID
             )
         except ValueError as e:
-            return Response({'error': 'Invalid token'}, status=401)
+            return Response({f'error: {str(e)}'}, status=401)
 
         email = idinfo.get('email')
 
@@ -31,15 +31,20 @@ class GoogleLoginView(APIView):
             total_users = User.objects.all().count()
             user = User.objects.get(email=email)
         except User.DoesNotExist:
+            # Dynamically get user status/is_staff (admin)
+            user_status = 'APPROVED' if total_users == 0 else 'PENDING'
+            user_is_staff = True if total_users == 0 else False
             user = User.objects.create_user(
                 username=email,
                 email=email,
                 first_name=idinfo.get('given_name', ''),
                 last_name=idinfo.get('family_name', ''),
+                is_staff=user_is_staff
             )
-            user_status = 'APPROVED' if total_users == 0 else 'PENDING'
             UserProfile.objects.create(
-                user=user, picture=idinfo.get('picture', ''), status=user_status
+                user=user, 
+                picture=idinfo.get('picture', ''),
+                status=user_status,
             )
             return Response({'status': 'pending'}, status=202)
         try:
