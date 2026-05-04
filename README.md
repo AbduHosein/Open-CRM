@@ -4,7 +4,8 @@ By: Abdu Hosein, Phil Lane
 
 A basic v1 CRM made with Django + SQLite + Typescript React for solopreneurs or small agencies.
 
-<img width="1266" height="423" alt="image" src="https://github.com/user-attachments/assets/293d46a8-f26f-423e-932e-7a98f80a99d8" />
+<img width="1491" height="655" alt="image" src="https://github.com/user-attachments/assets/f5699527-a7e2-4f32-a2b3-726c6af3bbdb" />
+
 
 ### Quick Start Guide ###
 
